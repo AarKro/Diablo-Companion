@@ -57,8 +57,6 @@ export const App: React.FC = () => {
     if (!items.some((item) => itemSlugAndId.endsWith(item.id))) {
       const item = await D3Api.fetchItem(itemSlugAndId);
 
-      console.log(item);
-
       const listItem = {
         id: itemSlugAndId,
         name: item.name,
