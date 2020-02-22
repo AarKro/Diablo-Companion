@@ -26,7 +26,7 @@ export const AuthForm: React.FC<Props> = (props: Props) => {
     localStorage.setItem('clientId', clientId);
     localStorage.setItem('clientSecret', clientSecret);
 
-    authenticate()
+    await authenticate()
 
     window.setInterval(async () => authenticate(), 80000);
 

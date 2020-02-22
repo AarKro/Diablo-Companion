@@ -17,14 +17,18 @@ const fetchItemTypeIndex = async (setter: (value: ItemTypeIndex) => void): Promi
   setter(itemTypeIndex);
 }
 
+const loadFromLocalStorage = async (setter: (value: ItemTypeIndex) => void): Promise<void> => {
+  await authenticate();
+  fetchItemTypeIndex(setter);
+}
+
 export const App: React.FC = () => {
   const [items, setItems] = React.useState<ListItem[]>([]);
   const [itemTypeIndex, setItemTypeIndex] = React.useState<ItemTypeIndex | null>(null);
 
   React.useEffect(() => {
     if (localStorage.getItem('clientId') && localStorage.getItem('clientSecret')) {
-      authenticate();
-      fetchItemTypeIndex(setItemTypeIndex);
+      loadFromLocalStorage(setItemTypeIndex);
     }
 
     const possibleItems = localStorage.getItem('items');
