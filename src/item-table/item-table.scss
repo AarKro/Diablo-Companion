@@ -6,19 +6,23 @@
 
 .row {
   width: 100%;
-  height: 50px;
   flex: 1 1 auto;
   border-radius: 7px;
   margin: 5px 0;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   padding: 0 10px;
-  box-shadow: 0 0 8px #000;
   transition: all .2s;
 
+  & div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   & img {
-    min-width: 32px;
+    height: 50px;
+    min-width: 25px;
   }
 
   & div {
@@ -30,5 +34,9 @@
     margin-left: 15px;
     font-weight: bold;
     flex: 1 1 auto;
+  }
+
+  & .flavor {
+    margin: 5px 3px 10px 3px;
   }
 }

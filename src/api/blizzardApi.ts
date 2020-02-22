@@ -21,6 +21,7 @@ export interface Item {
   slug: string;
   name: string;
   icon: string;
+  flavorText: string;
   color: 'white' | 'blue' | 'yellow' | 'orange' | 'green';
 }
 

@@ -12,7 +12,9 @@ const itemColors = {
 
 interface Props {
   item: ListItem;
+  active: boolean;
   removeItem: (id: string) => void;
+  setActive: (id: string) => void;
 }
 
 export const ItemRow = SortableElement((props: Props) => {
@@ -20,11 +22,22 @@ export const ItemRow = SortableElement((props: Props) => {
     props.removeItem(props.item.id);
   }
 
+  const toggleActive = (): void => {
+    props.setActive(props.item.id);
+  }
+
   return (
-    <div className="row" style={{ backgroundColor: itemColors[props.item.color] }}>
-      <img src={`http://media.blizzard.com/d3/icons/items/small/${props.item.icon}.png`} alt="Item image" />
-      <label>{props.item.name}</label>
-      <div onClick={removeItem}>&times;</div>
+    <div className="row" onClick={toggleActive} style={{ backgroundColor: itemColors[props.item.color] }}>
+      <div>
+        <img src={`http://media.blizzard.com/d3/icons/items/small/${props.item.icon}.png`} alt="Item image" />
+        <label>{props.item.name}</label>
+        <div onClick={removeItem}>&times;</div>
+      </div>
+      {props.active &&
+        <div>
+          <div className="flavor">{props.item.flavorText}</div>
+        </div>
+      }
     </div>
   );
 });
