@@ -1,0 +1,14 @@
+.app {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.sort-active {
+  box-shadow: 0 0 0 0 #000;
+  transition: box-shadow .2s;
+}
+
+.sort-active.animate {
+  box-shadow: 0 0 10px #000;
+}

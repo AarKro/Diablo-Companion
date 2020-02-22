@@ -1,0 +1,33 @@
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  width: 100%;
+  height: 50px;
+  flex: 1 1 auto;
+  border-radius: 7px;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
+  box-shadow: 0 0 8px #000;
+
+  & img {
+    min-width: 32px;
+  }
+
+  & div {
+    justify-self: baseline;
+    cursor: pointer;
+  }
+
+  & label {
+    margin-left: 15px;
+    font-weight: bold;
+    flex: 1 1 auto;
+  }
+}
