@@ -1,0 +1,20 @@
+{
+    "name": "Diablo Companion",
+    "short_name": "D3C",
+    "icons": [
+        {
+            "src": "/180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/1024.png",
+            "sizes": "1024x1024x",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#5858A7",
+    "theme_color": "#CCCCCC"
+}
