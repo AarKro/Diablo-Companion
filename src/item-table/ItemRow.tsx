@@ -27,7 +27,7 @@ export const ItemRow = SortableElement((props: Props) => {
   }
 
   return (
-    <div className="row" onClick={toggleActive} style={{ backgroundColor: itemColors[props.item.color] }}>
+    <div className="row" onClick={toggleActive} style={{ border: `thick solid ${itemColors[props.item.color]}` }}>
       <div>
         <img src={`http://media.blizzard.com/d3/icons/items/small/${props.item.icon}.png`} alt="Item image" />
         <label>{props.item.name}</label>

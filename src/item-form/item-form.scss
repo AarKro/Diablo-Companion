@@ -1,9 +1,13 @@
 .item-form {
   width: 100%;
+  background-color: #65006b;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 20px;
 
   & label {
     text-transform: uppercase;
     font-weight: bold;
-    color: #ccc;
+    color: #fff;
   }
 }

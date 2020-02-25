@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 
 .row {
@@ -13,6 +14,8 @@
   flex-direction: column;
   padding: 0 10px;
   transition: all .2s;
+  background-color: #fffee6;
+  color: #65006b;
 
   & div {
     display: flex;
